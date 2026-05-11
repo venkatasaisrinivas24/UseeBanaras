@@ -1,15 +1,6 @@
 [build]
   command = "npm run build"
   publish = "dist"
-  functions = "dist/server"
-
-[context.production]
-  command = "npm run build"
-  publish = "dist"
-
-[context.deploy-preview]
-  command = "npm run build:dev"
-  publish = "dist"
 
 [[redirects]]
   from = "/*"
