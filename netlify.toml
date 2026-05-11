@@ -1,17 +1,10 @@
 [build]
   command = "npm run build"
-  publish = "dist"
+  publish = "dist/client"
   functions = "dist/server"
-
-[context.production]
-  command = "npm run build"
-  publish = "dist"
-
-[context.deploy-preview]
-  command = "npm run build:dev"
-  publish = "dist"
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/.netlify/functions/index"
   status = 200
+  force = true
